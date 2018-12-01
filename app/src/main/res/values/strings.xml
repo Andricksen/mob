@@ -49,4 +49,6 @@
     <string name="annuler">Annuler</string>
     <string name="info_titre">Debloquer</string>
     <string name="info_description">Pour debloquer toute les options celle-ci y comprise veuillez partager l\'info a 10 personnes sur whatsApp</string>
+    <string name="title_activity_activation_tabs">Activation</string>
+    <string name="section_format">Hello World from section: %1$d</string>
 </resources>

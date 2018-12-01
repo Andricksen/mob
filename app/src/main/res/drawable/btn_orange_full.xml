@@ -6,10 +6,13 @@
     <corners
         android:radius="20dp"
         />
+
+
+
     <gradient
-        android:startColor		= "#6ba8f2"
-        android:endColor		= "#242fcd"
-        android:gradientRadius	= "300"
-        android:type			= "radial"/>
+        android:startColor		= "#ff6600"
+        android:endColor		= "#ff9500"
+        android:gradientRadius	= "500"
+        android:type			= "sweep"/>
 
 </shape>

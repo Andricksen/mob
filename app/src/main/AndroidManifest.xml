@@ -3,7 +3,7 @@
     package="com.example.andrick.mob">
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
-
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
     <!-- Include required permissions for Google Mobile Ads to run. -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -15,8 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:screenOrientation="portrait"
-            android:name=".welcomescreen.SplashScreenActivity">
+            android:name=".welcomescreen.SplashScreenActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,62 +24,73 @@
             </intent-filter>
         </activity>
         <activity
-            android:screenOrientation="portrait"
             android:name=".welcomescreen.WelcomeActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
-            android:screenOrientation="portrait"
             android:name=".ChoixReseau"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
+            android:name=".Menu"
             android:screenOrientation="portrait"
-            android:name=".Menu" />
+            android:theme="@style/AppTheme.Dialog" />
         <activity
+            android:name=".Activation"
             android:screenOrientation="portrait"
-            android:name=".Activation" />
+            android:theme="@style/AppTheme.Dialog" />
         <activity
-            android:theme="@style/AppTheme.Dialog"
-            android:screenOrientation="portrait"
+            android:name=".Verification"
             android:parentActivityName=".Menu"
-            android:name=".Verification" />
-        <activity
             android:screenOrientation="portrait"
-            android:name=".Recharge" />
+            android:theme="@style/AppTheme.Dialog" />
         <activity
-            android:screenOrientation="portrait"
-            android:name=".Urgence" />
+            android:name=".Recharge"
+            android:screenOrientation="portrait" />
         <activity
+            android:name=".Urgence"
             android:screenOrientation="portrait"
-            android:name=".Envoyer" />
+            android:theme="@style/AppTheme.Dialog" />
         <activity
+            android:name=".Envoyer"
             android:screenOrientation="portrait"
-            android:name=".EnvoyerServ" />
+            android:theme="@style/AppTheme.Dialog" />
         <activity
-            android:screenOrientation="portrait"
-            android:name=".EnvoyerCred" />
+            android:name=".EnvoyerServ"
+            android:screenOrientation="portrait" />
         <activity
-            android:screenOrientation="portrait"
-            android:name=".ActivationMin" />
+            android:name=".EnvoyerCred"
+            android:screenOrientation="portrait" />
         <activity
-            android:screenOrientation="portrait"
-            android:name=".ActivationSms" />
+            android:name=".ActivationMin"
+            android:screenOrientation="portrait" />
         <activity
-            android:screenOrientation="portrait"
-            android:name=".ActivationMega" />
+            android:name=".ActivationSms"
+            android:screenOrientation="portrait" />
         <activity
-            android:screenOrientation="portrait"
-            android:name=".MainActivity" />
+            android:name=".ActivationMega"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
         <!-- This meta-data tag is required to use Google Play Services. -->
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
         <activity
-            android:screenOrientation="portrait"
             android:name=".Main2Activity"
-            android:label="@string/title_activity_main2" />
+            android:label="@string/title_activity_main2"
+            android:screenOrientation="portrait" />
         <!-- Include the AdActivity configChanges and theme. -->
 
+        <activity
+            android:name=".activation_tabs"
+            android:label="@string/title_activity_activation_tabs"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Dialog" />
+        <activity android:name=".money_actions"
+            android:theme="@style/AppTheme.Dialog"/>
     </application>
 
 </manifest>

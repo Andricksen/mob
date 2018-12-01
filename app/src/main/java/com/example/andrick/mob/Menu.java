@@ -15,36 +15,8 @@ import static com.example.andrick.mob.R.id.activation;
 public class Menu extends AppCompatActivity {
 
     private BddInterne bdd;
-    public void en_parler_a()
-    {
-        String whatsAppMessage = "Telecharger l'application Mob sur https://";
 
-        Intent sendIntent = new Intent();
-        sendIntent.setAction(Intent.ACTION_SEND);
-        sendIntent.putExtra(Intent.EXTRA_TEXT, whatsAppMessage);
-        sendIntent.setType("text/plain");
 
-        // Do not forget to add this to open whatsApp App specifically
-
-        sendIntent.setPackage("com.whatsapp");
-        startActivity(sendIntent);
-
-        try {
-            bdd.Inserer_donnees("0");
-            Toast.makeText(Menu.this,"Insertion",Toast.LENGTH_LONG).show();
-        }catch (SQLiteException ex){
-            Toast.makeText(Menu.this,"No Insertion", Toast.LENGTH_LONG).show();
-        }
-
-    }
-    public int check_si_debloquer()
-    {
-        if(bdd.compte_insertion()==0)
-        {
-            return 0;
-        }
-        return 1;
-    }
     public void boit_de_dialogue()
     {
 
@@ -55,7 +27,7 @@ public class Menu extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
 
-                en_parler_a();
+//                en_parler_a();
             }
         });
         builder.setNegativeButton(R.string.annuler, null);
@@ -82,16 +54,11 @@ public class Menu extends AppCompatActivity {
         recharg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(check_si_debloquer()==0)
-                {
-                    boit_de_dialogue();
-                }
-                else
-                {
+
                     Intent intent=new Intent(Menu.this,Recharge.class);
                     intent.putExtra("action",1);
                     startActivity(intent);
-                }
+
 
             }
         });
@@ -99,16 +66,11 @@ public class Menu extends AppCompatActivity {
         activ.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(check_si_debloquer()==0)
-                {
-                    boit_de_dialogue();
-                }
-                else
-                {
-                    Intent intent=new Intent(Menu.this,ChoixReseau.class);
+
+                    Intent intent=new Intent(Menu.this,Activation.class);
                     intent.putExtra("action",2);
                     startActivity(intent);
-                }
+
 
             }
         });
@@ -135,16 +97,10 @@ public class Menu extends AppCompatActivity {
         envoy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(check_si_debloquer()==0)
-                {
-                    boit_de_dialogue();
-                }
-                else
-                {
+
                     Intent intent=new Intent(Menu.this,Envoyer.class);
                     intent.putExtra("action",4);
                     startActivity(intent);
-                }
 
             }
         });
@@ -154,8 +110,19 @@ public class Menu extends AppCompatActivity {
         abou.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int i=bdd.compte_insertion();
-                Toast.makeText(Menu.this,String.valueOf(i),Toast.LENGTH_LONG).show();
+                //int i=bdd.compte_insertion();
+                //Toast.makeText(Menu.this,String.valueOf(i),Toast.LENGTH_LONG).show();
+            }
+        });
+
+        arge.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //int i=bdd.compte_insertion();
+                //Toast.makeText(Menu.this,String.valueOf(i),Toast.LENGTH_LONG).show();
+                Intent intent=new Intent(Menu.this,money_actions.class);
+                //intent.putExtra("action",4);
+                startActivity(intent);
             }
         });
 

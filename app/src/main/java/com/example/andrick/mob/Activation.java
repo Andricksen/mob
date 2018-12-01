@@ -7,41 +7,29 @@ import android.view.View;
 import android.widget.TextView;
 
 public class Activation extends AppCompatActivity {
-
+    TextView min;
+    TextView mega;
+    TextView sms;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activation);
 
-        TextView mi=(TextView)findViewById(R.id.minute);
-        TextView sm=(TextView)findViewById(R.id.sms);
-        TextView mo=(TextView)findViewById(R.id.mega);
+        min=(TextView)findViewById(R.id.minute_min);
+        mega=(TextView)findViewById(R.id.mega_mega);
+        sms=(TextView)findViewById(R.id.sms_sms);
 
-        assert mi !=null;
-        assert sm !=null;
-        assert mo !=null;
-
-        mi.setOnClickListener(new View.OnClickListener() {
+        min.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Activation.this,ActivationMin.class);
+
+                Intent intent=new Intent(Activation.this,activation_tabs.class);
+                intent.putExtra("action",2);
                 startActivity(intent);
+
+
             }
         });
 
-        sm.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(Activation.this,ActivationSms.class);
-                startActivity(intent);
-            }
-        });
-        mo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(Activation.this,ActivationMega.class);
-                startActivity(intent);
-            }
-        });
     }
 }

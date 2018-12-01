@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:gravity="center"
-    tools:context="com.example.andrick.mob.Urgence">
+    android:gravity="center_vertical"
+    tools:context="com.example.andrick.mob.money_actions">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="368dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -22,28 +25,27 @@
             <TextView
                 android:id="@+id/minu1"
                 style="@style/text_button"
-                android:background="@drawable/btn_red"
-                android:text="SERVICE CLIENT" />
+                android:background="@drawable/btn_orange_full"
+                android:text="RETRAIT" />
+
             <TextView
                 android:id="@+id/minu2"
                 style="@style/text_button"
-                android:background="@drawable/btn_red"
-                android:text="AMBULANCE" />
+                android:background="@drawable/btn_orange_full"
+                android:text="DEPOT" />
+
+            <TextView
+                android:id="@+id/minu7"
+                style="@style/text_button"
+                android:background="@drawable/btn_orange_full"
+                android:text="ACHAT CREDIT" />
             <TextView
                 android:id="@+id/minu3"
                 style="@style/text_button"
-                android:background="@drawable/btn_red"
-                android:text="POMPIER" />
-
-
-            <TextView
-                android:id="@+id/minu4"
-                style="@style/text_button"
-                android:background="@drawable/btn_red"
-                android:text="POLICE" />
+                android:background="@drawable/btn_orange_full"
+                android:text="SOLDE" />
         </LinearLayout>
-        <include layout="@layout/footer"
-            android:layout_height="100dp"
-            android:layout_width="match_parent" />
+
     </LinearLayout>
+
 </RelativeLayout>

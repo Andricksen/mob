@@ -6,6 +6,16 @@
 
     tools:context="com.example.andrick.mob.Menu">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -15,7 +25,7 @@
             android:orientation="vertical"
             android:layout_width="fill_parent"
             android:layout_height="250dp"
-            android:background="@color/colorPrimaryDark">
+            android:background="@drawable/btn_blue">
 
             <TextView
                 android:layout_width="fill_parent"
@@ -35,162 +45,164 @@
             android:layout_height="match_parent">
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="109dp"
+                android:gravity="center"
+                android:orientation="horizontal"
                 android:padding="1dp">
 
                 <LinearLayout
-                    android:orientation="vertical"
                     android:layout_width="161dp"
                     android:layout_height="fill_parent"
+                    android:orientation="vertical"
                     android:padding="1dp">
 
                     <TextView
+                        android:id="@+id/recharge_m"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
+                        android:background="@drawable/btn_blue"
+                        android:gravity="center_vertical|center_horizontal"
                         android:text="RECHARGE"
-                        android:id="@+id/recharge_m"
                         android:textColor="#ffffff"
                         android:textSize="30dp"
-                        android:textStyle="bold"
-                        android:gravity="center_vertical|center_horizontal"
-                        android:background="@color/colorAccent" />
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:orientation="vertical"
                     android:layout_width="161dp"
                     android:layout_height="fill_parent"
+                    android:orientation="vertical"
                     android:padding="1dp">
 
                     <TextView
+                        android:id="@+id/activation"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
+                        android:background="@drawable/btn_orange"
+                        android:gravity="center_vertical|center_horizontal"
                         android:text="ACTIVATION"
-                        android:id="@+id/activation"
                         android:textColor="#ffffff"
                         android:textSize="25dp"
-                        android:textStyle="bold"
-                        android:gravity="center_vertical|center_horizontal"
-                        android:background="@color/material_deep_teal_500" />
+                        android:textStyle="bold" />
                 </LinearLayout>
 
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal"
                 android:padding="1dp">
 
                 <LinearLayout
-                    android:orientation="vertical"
                     android:layout_width="162dp"
                     android:layout_height="fill_parent"
+                    android:orientation="vertical"
                     android:padding="1dp">
 
                     <LinearLayout
-                        android:orientation="vertical"
                         android:layout_width="fill_parent"
                         android:layout_height="110dp"
-                        android:paddingBottom="1dp"
-                        android:padding="1dp">
+                        android:orientation="vertical"
+                        android:padding="1dp"
+                        android:paddingBottom="1dp">
 
                         <TextView
+                            android:id="@+id/verification"
                             android:layout_width="fill_parent"
                             android:layout_height="fill_parent"
-                            android:text="VERIFICATION"
-                            android:id="@+id/verification"
-                            android:paddingBottom="1dp"
-                            android:textColor="#ffffff"
+                            android:background="@drawable/btn_green"
                             android:gravity="center_vertical|center_horizontal"
-                            android:textStyle="bold"
+                            android:paddingBottom="1dp"
+                            android:text="VERIFICATION"
+                            android:textColor="#ffffff"
                             android:textSize="20dp"
-                            android:background="@color/material_grey_850" />
+                            android:textStyle="bold" />
+
                     </LinearLayout>
 
                     <LinearLayout
-                        android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:orientation="vertical"
                         android:padding="1dp">
 
                         <TextView
+                            android:id="@+id/abouts"
                             android:layout_width="fill_parent"
                             android:layout_height="fill_parent"
-                            android:text="About"
-                            android:id="@+id/abouts"
-                            android:textColor="#ffffff"
+                            android:background="@drawable/btn_orange_op"
                             android:gravity="center_vertical|center_horizontal"
-                            android:textStyle="bold"
+                            android:text="A propos"
+                            android:textColor="#ffffff"
                             android:textSize="20dp"
-                            android:background="#cf660484" />
+                            android:textStyle="bold" />
                     </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
-                    android:orientation="vertical"
                     android:layout_width="162dp"
                     android:layout_height="fill_parent"
+                    android:orientation="vertical"
                     android:padding="1dp">
 
                     <LinearLayout
-                        android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="49dp"
+                        android:orientation="vertical"
                         android:padding="1dp">
 
                         <TextView
+                            android:id="@+id/urgence"
                             android:layout_width="fill_parent"
                             android:layout_height="fill_parent"
-                            android:text="URGENCE"
-                            android:id="@+id/urgence"
-                            android:background="@android:color/holo_red_dark"
-                            android:paddingBottom="1dp"
-                            android:textColor="#ffffff"
+                            android:background="@drawable/btn_red_full"
                             android:gravity="center_vertical|center_horizontal"
-                            android:textStyle="bold"
-                            android:textSize="15dp" />
+                            android:paddingBottom="1dp"
+                            android:text="URGENCE"
+                            android:textColor="#ffffff"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
                     </LinearLayout>
 
                     <LinearLayout
-                        android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="66dp"
+                        android:orientation="vertical"
                         android:padding="1dp">
 
                         <TextView
+                            android:id="@+id/money"
                             android:layout_width="fill_parent"
                             android:layout_height="fill_parent"
-                            android:text="MONEY"
-                            android:id="@+id/money"
-                            android:background="@android:color/holo_orange_dark"
-                            android:paddingBottom="1dp"
-                            android:textColor="#ffffff"
+                            android:background="@drawable/btn_orange_full"
                             android:gravity="center_vertical|center_horizontal"
-                            android:textStyle="bold"
-                            android:textSize="20dp" />
+                            android:paddingBottom="1dp"
+                            android:text="MONEY"
+                            android:textColor="#ffffff"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
                     </LinearLayout>
 
                     <LinearLayout
-                        android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:orientation="vertical"
                         android:padding="1dp">
 
                         <TextView
+                            android:id="@+id/envoyer_men"
                             android:layout_width="fill_parent"
                             android:layout_height="fill_parent"
-                            android:text="ENVOYER "
-                            android:id="@+id/envoyer_men"
-                            android:autoText="false"
-                            android:background="@android:color/holo_green_dark"
-                            android:textColor="#ffffff"
+                            android:background="@drawable/btn_orange_viol"
                             android:gravity="center_vertical|center_horizontal"
-                            android:textStyle="bold"
+                            android:text="ENVOYER "
+                            android:textColor="#ffffff"
+                            android:textIsSelectable="false"
                             android:textSize="20dp"
-                            android:textIsSelectable="false" />
+                            android:textStyle="bold" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
